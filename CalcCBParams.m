@@ -52,7 +52,11 @@ end
 SeatHeight=WaterLineHeight-SeatDepth;
 LLL=2*PersonScale;
 ULL=1.5*PersonScale;
-LegMargin=Lbay-(ULL+sqrt(LLL^2-SeatHeight^2));
+if SeatHeight<LLL
+    LegMargin=Lbay-(ULL+sqrt(LLL^2-SeatHeight^2));
+else
+    LegMargin=Lbay-ULL;
+end
 
 % Calc CG height
 % Assume person cg is 6 in. above seat, and structure cg is 1/2 of gunwale

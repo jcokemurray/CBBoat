@@ -12,7 +12,7 @@ GunwaleMargin=5; %in, gunwale height margin above waterline...
 PersonWeight=175; %lbs
 
 EndPitch=35; % deg
-EndHeight=15; % ft
+EndHeight=15; % in
 
 %-----
 CabinLength=Nbay*BayLength; % ft, overall boat length minus components from bow and stern (Nbays * BayLength)
@@ -62,7 +62,7 @@ TDir=TDir/sqrt(TDir*TDir');
 NDir=cross(PNorm,TDir);
 Edge2=Edge*[TDir',NDir']; % 1 is along, 2 is into corner
 
-% Plot Template
+% Plot Template in cm
 CornerPoint=[CabinLength/2,FloorWidth/2];
 EPoint=[TempL/2,FloorWidth/2];
 GPoint=[CabinLength/2,TempW/2];
@@ -96,18 +96,18 @@ FoldPoints=[TempL/2,FloorWidth/2
             
 figure(1)
 hold on
-plot(EdgePoints(:,2),EdgePoints(:,1),'b-')
+plot(EdgePoints(:,2)*2.54,EdgePoints(:,1)*2.54,'b-')
 
-plot(FoldPoints(1:2,2),FoldPoints(1:2,1),'b--')
-plot(FoldPoints(3:4,2),FoldPoints(3:4,1),'b--')
-plot(FoldPoints(5:6,2),FoldPoints(5:6,1),'b--')
-plot(FoldPoints(7:8,2),FoldPoints(7:8,1),'b--')
+plot(FoldPoints(1:2,2)*2.54,FoldPoints(1:2,1)*2.54,'b--')
+plot(FoldPoints(3:4,2)*2.54,FoldPoints(3:4,1)*2.54,'b--')
+plot(FoldPoints(5:6,2)*2.54,FoldPoints(5:6,1)*2.54,'b--')
+plot(FoldPoints(7:8,2)*2.54,FoldPoints(7:8,1)*2.54,'b--')
 
-plot(CornerFoldPoints(:,2),CornerFoldPoints(:,1),'b--')
+plot(CornerFoldPoints(:,2)*2.54,CornerFoldPoints(:,1)*2.54,'b--')
 
 hold off
 grid on
-title('Template')
+title('Template (cm)')
 set(gca,'DataAspectRatio',[1,1,1])
 
 % plot completed boat form
@@ -129,11 +129,8 @@ Points=[BoatLength/2,-FloorWidth/2,EndHeight    % Front and rear
 Tri=delaunay(Points(:,1),Points(:,2));
 Color=[3 3 3 3 2 2 4 4 1 1 2 2 4 4];
 trisurf(Tri,Points(:,1),Points(:,2),Points(:,3),Color)
-title('Boat')
+title('Boat (in)')
 set(gca,'DataAspectRatio',[1,1,1])
 xlabel('x')
 ylabel('y')
 zlabel('z')
-
-
-

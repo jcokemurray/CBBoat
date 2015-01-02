@@ -41,7 +41,7 @@ clabel(cs,h,'LabelSpacing',500)
 hold on
 [cs,h]=contour(L,G,SeatHeight,0:6,'r-'); % contours of seat level above water
 clabel(cs,h,'LabelSpacing',500)
-[cs,h]=contour(L,G,FloorWidth,[3,6,9],'k-'); % contours of floor width
+[cs,h]=contour(L,G,FloorWidth,[3,6,9,12],'k-'); % contours of floor width
 clabel(cs,h,'LabelSpacing',500)
 [cs,h]=contour(L,G,LegMargin,[-6,0,6],'g-'); % contours of legroom margin
 clabel(cs,h,'LabelSpacing',500)
