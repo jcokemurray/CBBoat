@@ -1,6 +1,9 @@
 clear; 
 close all;
 
+% Utils path
+path('../',path);
+
 % Plot out boat dimensions and calc relevant figures
 Nbay=1; % num of bays (rowers)
 BayLength=18; % length of bays (in)

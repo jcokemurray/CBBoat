@@ -1,4 +1,10 @@
+clear; 
+close all;
+
 % Sizing considerations
+
+% Utils path
+path('../',path);
 
 Lbay=18:3:72; %in,  min Lbay is 1.5 ft. with a 1 ft. wide seat (6 in. upper leg overhang and vertical lower legs)
 GunPitch=40:1:75; % deg
@@ -10,7 +16,7 @@ CabinWidth=33; %in, generally needs to be fixed for decent ability to row with a
 SeatDepth=1; % in, below waterline
 GunwaleMargin=5; %in, gunwale height margin above waterline...
 PersonWeight=175; %lbs
-Nbay=4; % num of bays (rowers)
+Nbay=1; % num of bays (rowers)
 
 TotalWeight=NaN*ones(size(L));
 StructureWeight=NaN*ones(size(L));

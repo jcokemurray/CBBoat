@@ -1,4 +1,10 @@
+clear; 
+close all;
+
 % Sizing considerations
+
+% Utils path
+path('../',path);
 
 Lbay=6:1:24; % in
 GunPitch=40:1:75; % deg

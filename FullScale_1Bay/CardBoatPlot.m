@@ -1,8 +1,11 @@
 clear; 
 close all;
 
+% Utils path
+path('../',path);
+
 % Plot out boat dimensions and calc relevant figures
-Nbay=4; % num of bays (rowers)
+Nbay=1; % num of bays (rowers)
 BayLength=47; % length of bays (in)
 GunwalePitch=55; % deg
 
@@ -12,7 +15,7 @@ GunwaleMargin=5; %in, gunwale height margin above waterline...
 PersonWeight=175; %lbs
 
 EndPitch=35; % deg
-EndHeight=15; % in
+EndHeight=13; % in
 
 %-----
 CabinLength=Nbay*BayLength; % ft, overall boat length minus components from bow and stern (Nbays * BayLength)
