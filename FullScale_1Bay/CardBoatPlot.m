@@ -21,7 +21,7 @@ EndHeight=13; % in
 CabinLength=Nbay*BayLength; % ft, overall boat length minus components from bow and stern (Nbays * BayLength)
 
 % Calc parameters
-[TotalWeight,StructureWeight,CGH,MCH,GunwaleHeight,WaterLineHeight,FloorWidth,LegMargin,FA,WA,SeatHeight]=CalcCBParams(BayLength,GunwalePitch,CabinWidth,GunwaleMargin,PersonWeight,SeatDepth,Nbay,1);
+[TotalWeight,StructureWeight,CGH,CGLShift,MCH,GunwaleHeight,WaterLineHeight,FloorWidth,LegMargin,FA,WA,SeatHeight]=CalcCBParams(BayLength,GunwalePitch,CabinWidth,GunwaleMargin,PersonWeight,SeatDepth,Nbay,1);
 
 StabMargin=(MCH-CGH)/MCH*100 %Roll stab margin, might want 40-50% or so...
 SeatH=SeatHeight
@@ -30,6 +30,7 @@ FloorWidth
 GunwaleHeight
 TotalWeight
 StructureWeight
+WaterLineHeight
 
 % Check
 GL=GunwaleHeight/sin(GunwalePitch/180*pi); % Length of Gunwale piece
