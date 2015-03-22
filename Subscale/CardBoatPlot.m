@@ -6,17 +6,17 @@ path('../',path);
 
 % Plot out boat dimensions and calc relevant figures
 Nbay=1; % num of bays (rowers)
-BayLength=18; % length of bays (in)
+BayLength=22; % length of bays (in)
 GunwalePitch=55; % deg
 
-CabinWidth=12; %in, generally needs to be fixed for decent ability to row with a kayak paddle, but generally less width => less drag but less stability...
-SeatDepth=.375; % in, below waterline
-GunwaleMargin=1.875; %in, gunwale height margin above waterline...
-PersonWeight=8.5; %lbs
-PersonScale=.3636; % length scale for legroom and person CG metrics...
+CabinWidth=15.5; %in, generally needs to be fixed for decent ability to row with a kayak paddle, but generally less width => less drag but less stability...
+SeatDepth=.5; % in, below waterline
+GunwaleMargin=2.375; %in, gunwale height margin above waterline...
+PersonWeight=18; %lbs
+PersonScale=.4681; % length scale for legroom and person CG metrics...
 
 EndPitch=35; % deg
-EndHeight=5; % in
+EndHeight=6; % in
 
 %-----
 CabinLength=Nbay*BayLength; % ft, overall boat length minus components from bow and stern (Nbays * BayLength)

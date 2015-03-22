@@ -1,4 +1,4 @@
-function [TotalWeight,StructureWeight,CGH,CGLShift,MCH,GunwaleHeight,WaterLineHeight,FW,LegMargin,FA,WA,SeatHeight]=CalcCBParams(Lbay,GunPitch,CabinWidth,GunwaleMargin,PersonWeight,SeatDepth,Nbay,PersonScale)
+function [TotalWeight,StructureWeight,CGH,MCH,GunwaleHeight,WaterLineHeight,FW,LegMargin,FA,WA,SeatHeight]=CalcCBParams(Lbay,GunPitch,CabinWidth,GunwaleMargin,PersonWeight,SeatDepth,Nbay,PersonScale)
 
 % All lengths in and out in inches. All angles in deg
 
@@ -50,7 +50,7 @@ end
 SeatHeight=WaterLineHeight-SeatDepth;
 
 % Calc performance metrics
-[LegMargin,CGH,CGLShift,MCH,FA,WA]=CalcPerfMetrics(PersonWeight,Lbay,Nbay,GunPitch,GunwaleHeight,FW,SeatHeight,WaterLineHeight,SWpB,PersonScale);
+[LegMargin,CGH,MCH,FA,WA]=CalcPerfMetrics(PersonWeight,Lbay,Nbay,GunPitch,GunwaleHeight,FW,SeatHeight,WaterLineHeight,SWpB,PersonScale);
 
 % Total weight (lbs)
 StructureWeight=SWpB*Nbay;
@@ -64,5 +64,4 @@ SeatHeight=SeatHeight*12;
 LegMargin=LegMargin*12; 
 MCH=MCH*12; 
 CGH=CGH*12;
-CGLShift=CGLShift*12;
 
